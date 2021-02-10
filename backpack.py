@@ -12,8 +12,8 @@ def find_price(values_, n_, capacity_):
         if (n_ & current) != 0:
             w += v[0]
             price += v[1]
-            if w >= capacity_:
-                break
+            if w > capacity_:
+                return -1
         current <<= 1
     return price
 
